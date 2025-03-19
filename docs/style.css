@@ -20,7 +20,7 @@ header, footer, nav {
     padding-bottom:1px;
     font-family: Verdana;
     color:#F0F8FF;
-    
+    text-align:center;
     
     a:link {
         color: #FFFAF0;
