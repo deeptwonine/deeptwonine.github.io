@@ -79,6 +79,7 @@ nav.active {
 }
 
 #menu {
+    align-items: center;
     display: none;
     margin-left: auto;
     padding: 5px 10px;
@@ -205,108 +206,27 @@ nav > a {
     margin-top: clamp(5.5px, 0.8vw, 11px);
 }
 
-.icon{
+.icon {
     width: clamp(20px, 3.125vw, 40px);
+    aspect-ratio: 19/20;
+    object-position: 0% 0%;
+    object-fit: cover;
 }
 
-#menu {
-    align-items: center;
+.icon:hover {
+    object-position: 50% 0%;
 }
 
-#mail_work:hover {
-    content: url("graphics/mail_work2.png");
+.icon:active {
+    object-position: 100% 0%;
 }
 
-#mail_pers:hover {
-    content: url("graphics/mail_pers2.png");
+#nav_items li a:hover .icon {
+    object-position: 50% 0%;
 }
 
-#insta:hover {
-    content: url("graphics/insta2.png");
-}
-
-#github:hover {
-    content: url("graphics/github2.png");
-}
-
-#mail_work:active {
-    content: url("graphics/mail_work3.png");
-}
-
-#mail_pers:active {
-    content: url("graphics/mail_pers3.png");
-}
-
-#insta:active {
-    content: url("graphics/insta3.png");
-}
-
-#github:active {
-    content: url("graphics/github3.png");
-}
-
-#me_icon:hover {
-    content: url("graphics/me_icon2.png")
-}
-
-#me_icon:active {
-    content: url("graphics/me_icon3.png")
-}
-
-#menu:hover {
-    content: url("graphics/menu2.png")
-}
-
-#menu:active {
-    content: url("graphics/menu3.png")
-}
-
-#nav_items li a:hover #home {
-    content: url("graphics/home2.png");
-}
-
-#nav_items li a:active #home {
-    content: url("graphics/home3.png");
-}
-
-#nav_items li a:hover #study {
-    content: url("graphics/study2.png");
-}
-
-#nav_items li a:active #study {
-    content: url("graphics/study3.png");
-}
-
-#nav_items li a:hover #gallery {
-    content: url("graphics/gallery2.png");
-}
-
-#nav_items li a:active #gallery {
-    content: url("graphics/gallery3.png");
-}
-
-#nav_items li a:hover #random {
-    content: url("graphics/random2.png");
-}
-
-#nav_items li a:active #random {
-    content: url("graphics/random3.png");
-}
-
-#nav_items li a:hover #blog {
-    content: url("graphics/blog2.png");
-}
-
-#nav_items li a:active #blog {
-    content: url("graphics/blog3.png");
-}
-
-#nav_items li a:hover #cv {
-    content: url("graphics/cv2.png");
-}
-
-#nav_items li a:active #cv {
-    content: url("graphics/cv3.png");
+#nav_items li a:active .icon {
+    object-position: 100% 0%;
 }
 
 /* end of icons stuff */
@@ -445,7 +365,13 @@ footer {
 #footer {
     width: clamp(274.3px, 30vw, 384px);
     height: clamp(155px, 18.75vw, 240px);
+
     color: #467b23;
+    a:link {color: #3e6d1d;};
+    a:visited{color: #467b23;};
+    a:hover {color: #294a12;};
+    a:active {color: #467b23;};
+
     font-size: clamp(10px, 1.17vw, 15px);
     text-align: center;
 }
@@ -460,6 +386,15 @@ footer {
     margin-right: auto;
     text-align: center;
     color: #eea785
+}
+
+#signboard_container {
+    width: 100%;
+    height: 66.66%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 /* footer foooooooo */

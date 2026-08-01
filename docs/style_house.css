@@ -71,15 +71,16 @@ nav.active {
     padding: 5px 5px;
 }
 
-#nav_items li a:hover, #menu_btn:hover {
+#nav_items li a:hover {
     color: #403f3f;
 }
 
-#nav_items li a:active span, #menu_btn:active {
+#nav_items li a:active span {
     transform: translateY(0.3vw);
 }
 
 #menu {
+    align-items: center;
     display: none;
     margin-left: auto;
     padding: 5px 10px;
@@ -97,128 +98,54 @@ nav > a {
     margin-top: clamp(5.5px, 0.8vw, 11px);
 }
 
-.icon{
+.icon {
     width: clamp(20px, 3.125vw, 40px);
+    aspect-ratio: 19/20;
+    object-position: 0% 0%;
+    object-fit: cover;
 }
 
-#menu {
-    align-items: center;
+.icon:hover {
+    object-position: 50% 0%;
 }
 
-#mail_work:hover {
-    content: url("graphics/mail_work_btn2.png");
+.icon:active {
+    object-position: 100% 0%;
 }
 
-#mail_pers:hover {
-    content: url("graphics/mail_pers_btn2.png");
+#nav_items li a:hover .icon {
+    object-position: 50% 0%;
 }
 
-#insta:hover {
-    content: url("graphics/insta_btn2.png");
+#nav_items li a:active .icon {
+    object-position: 100% 0%;
 }
 
-#github:hover {
-    content: url("graphics/github_btn2.png");
+#tv_power {
+    width: 16.67%;
+    aspect-ratio: 11/5;
+    object-position: 60% 0%;
+    object-fit: cover;
 }
-
-#mail_work:active {
-    content: url("graphics/mail_work_btn3.png");
-}
-
-#mail_pers:active {
-    content: url("graphics/mail_pers_btn3.png");
-}
-
-#insta:active {
-    content: url("graphics/insta_btn3.png");
-}
-
-#github:active {
-    content: url("graphics/github_btn3.png");
-}
-
-#me_icon:hover {
-    content: url("graphics/me_icon2.png")
-}
-
-#me_icon:active {
-    content: url("graphics/me_icon3.png")
-}
-
-#nav_items li a:hover #home {
-    content: url("graphics/home_btn2.png");
-}
-
-#nav_items li a:active #home {
-    content: url("graphics/home_btn3.png");
-}
-
-#nav_items li a:hover #study {
-    content: url("graphics/study_btn2.png");
-}
-
-#nav_items li a:active #study {
-    content: url("graphics/study_btn3.png");
-}
-
-#nav_items li a:hover #gallery {
-    content: url("graphics/gallery_btn2.png");
-}
-
-#nav_items li a:active #gallery {
-    content: url("graphics/gallery_btn3.png");
-}
-
-#nav_items li a:hover #random {
-    content: url("graphics/random_btn2.png");
-}
-
-#nav_items li a:active #random {
-    content: url("graphics/random_btn3.png");
-}
-
-#nav_items li a:hover #blog {
-    content: url("graphics/blog_btn2.png");
-}
-
-#nav_items li a:active #blog {
-    content: url("graphics/blog_btn3.png");
-}
-
-#nav_items li a:hover #cv {
-    content: url("graphics/cv_btn2.png");
-}
-
-#nav_items li a:active #cv {
-    content: url("graphics/cv_btn3.png");
-}
-
-#menu:hover {
-    content: url("graphics/menu_btn2.png");
-}
-
-#menu:active {
-    content: url("graphics/menu_btn3.png");
-    }
 
 #tv_power:hover {
-    content: url("graphics/tv_power_off2.png");
+    object-position: 80% 0%;
 }
 
 #tv_power:active {
-    content: url("graphics/tv_power_off3.png");
+    object-position: 100% 0%;
 }
 
 #tv_power.on {
-    content: url("graphics/tv_power_on1.png");
+    object-position: 0% 0%;
 }
 
 #tv_power.on:hover {
-    content: url("graphics/tv_power_on2.png");
+    object-position: 20% 0%;
 }
 
 #tv_power.on:active {
-    content: url("graphics/tv_power_on3.png");
+    object-position: 40% 0%;
 }
 
 /* end of icons stuff */
@@ -371,12 +298,14 @@ header {
     aspect-ratio: 33/21;
     z-index: 2;
     pointer-events: none;
-    background-image: url('graphics/tv1.png');
-    background-size: cover;  
+    background-image: url('graphics/tv.png');
+    background-size: cover; 
+    background-position: 0% 0%;
 
     animation-name: tv;
     animation-duration: 300ms;
     animation-iteration-count: infinite;
+    animation-timing-function: steps(1, jump-end);
     animation-delay: -100ms;
 }
 
@@ -396,8 +325,6 @@ header {
     position: absolute;
     top: 79.17%;
     left: 79.55%;
-    width: 16.67%;
-    height: auto;
     pointer-events: all;
 }
 
@@ -520,7 +447,13 @@ footer {
     background-repeat: repeat-x;
     background-size: clamp(91.8px, 10vw, 128px) auto;
     height: clamp(91.8px, 10vw, 128px);
+
     color: #2e2e2e;
+    a:link {color: #474747;};
+    a:visited{color: #2e2e2e;};
+    a:hover {color: #656565;};
+    a:active {color: #2e2e2e;};
+
     font-size: clamp(10px, 1.17vw, 15px);
     text-align: center;
 
@@ -537,10 +470,10 @@ footer {
 }
 
 @keyframes tv {
-    0% {background-image: url('graphics/tv1.png');}
-    33.3% {background-image: url('graphics/tv2.png');}
-    66.7% {background-image: url('graphics/tv3.png');}
-    100% {background-image: url('graphics/tv1.png');}
+    0% {background-position: 0% 0%;}
+    33.3% {background-position: 50% 0%;}
+    66.7% {background-position: 100% 0%;}
+    100% {background-image: 0% 0%;}
 }
 
 @keyframes tv_on {
