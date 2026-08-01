@@ -2,56 +2,94 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<!-- USER DOCUMENT CONTENT -->
-
 <head>
-<link rel="stylesheet" href="../style.css"/>
-
-<title>Deepto Debnath - IISER Kolkata</title>
+    <link rel="stylesheet" href="../style_house.css"/>
+    
+    <link rel="icon" type="image/x-icon" href="../graphics/favicon.ico">
+    <title>Random - Deepto Debnath - IISER Kolkata</title>
 </head>
 
 <body>
 
-<header>
-    <h1>Random</h1>
-    <h3>Enjoy, random viewer!</h3>
-</header>
-
 <nav>
-    <p>
-        <a href="..">HOME</a>
-        &nbsp;
-        <a href="../iiserk">IISER-K MATERIALS</a>
-        &nbsp;
-        <a href="../gallery">GALLERY</a>
-        &nbsp;
-        <a href="">RANDOM</a>
-    </p>
+    <a href="../"><img class="icon" id="me_icon" src="../graphics/me_icon1.png" title="Hi there! Inspired by the Aseprite icon!"></a>
+
+    <img class="icon" id="menu" src="../graphics/menu_btn1.png" onclick="toggleMenu()">
+    
+    <ul id="nav_items">
+        <li>
+            <a href="..">
+                <img class="icon" id="home" src="../graphics/home_btn1.png">
+                <span>Home</span>
+            </a>
+        </li>
+        <li>
+            <a href="../iiserk/">
+                <img class="icon" id="study" src="../graphics/study_btn1.png">
+                <span>Notes</span>
+            </a>
+        </li>
+        <li>
+            <a href="../gallery/">
+                <img class="icon" id="gallery" src="../graphics/gallery_btn1.png">
+                <span>Gallery</span>
+            </a>
+        </li>
+        <li>
+            <a href="">
+                <img class="icon" id="random" src="../graphics/random_btn1.png">
+                <span>Random</span>
+            </a>
+        </li>
+        <li>
+            <a href="../blog/">
+                <img class="icon" id="blog" src="../graphics/blog_btn1.png">
+                <span>Blog</span>
+            </a>
+        </li>
+        <li>
+            <a href="../cv.html">
+                <img class="icon" id="cv" src="../graphics/cv_btn1.png">
+                <span>CV</span>
+            </a>
+        </li>
+    </ul>
 </nav>
 
-<section id="random">
-    <video controls autoplay width="100%">
-        <source src="random_movie.mp4" type="video/mp4">
-        Your browser does not support this video. Click <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">here</a> to try again.
-    </video>
+<header>
+    <span><b>Random</b></span>
+</header>
+
+<section id="content">
+    <section id="tv_content">
+        <video id="tv_show" width="100%">
+            <source src="channel1.mp4" type="video/mp4">
+            Your browser does not support this video. Click <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">here</a> to try again.
+        </video>
+    </section>
+
+    <section id="tv_overlay">
+        <img id="tv_cover" src="../graphics/tv_on_off.png">
+        <img id="tv_power" src="../graphics/tv_power_off1.png" onclick="toggleTV()">
+        <img id="tv_channel" src="../graphics/tv_channel.png" onClick="changeChannel()">
+    </section>
 </section>
 
 <footer>
-    <p>
-        <b>Find me on:</b>
-        <br>
-        <a href="mailto:dd24ms091@iiserkol.ac.in">institute email</a>
-        &nbsp;
-        <a href="mailto:deepto.debnath@outlook.com">personal email</a>
-        &nbsp;
-        <a href="https://www.instagram.com/deeptwonine/">instagram</a>
-        &nbsp;
-        <a href="https://github.com/deeptwonine/">github</a>
-    </p>
-    
-    <p>© Copyright 2024 Deepto Debnath. All lefts reserved.</p>
+    <br>
+    <b>Find me on:</b>
+        <section id="icons">
+            <a href="mailto:dd24ms091@iiserkol.ac.in"><img class="icon" id="mail_work" src="../graphics/mail_work_btn1.png" alt="institute email" title="Institute Email"></a>
+            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+            <a href="mailto:deepto.debnath@outlook.com"><img class="icon" id="mail_pers" src="../graphics/mail_pers_btn1.png" alt="personal email" title="Personal Email"></a>
+            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+            <a href="https://www.instagram.com/deeptwonine/"><img class="icon" id="insta" src="../graphics/insta_btn1.png" alt="instagram" title="Instagram"></a>
+            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+            <a href="https://github.com/deeptwonine/"><img class="icon" id="github" src="../graphics/github_btn1.png" alt="github" title="GitHub"></a>
+        </section>
+    <p>© Copyright 2026 Deepto Debnath. All lefts reserved.</p>
 </footer>
 
-<!-- USER DOCUMENT CONTENT END -->
+<script src="../script.js"></script>
 
 </body></html>

@@ -2,83 +2,146 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<!-- USER DOCUMENT CONTENT -->
-
 <head>
-<link rel="stylesheet" href="style.css"/>
-
-<title>Deepto Debnath - IISER Kolkata</title>
+    <link rel="stylesheet" href="style.css"/>
+    
+    <link rel="icon" type="image/x-icon" href="graphics/favicon.ico">
+    <title>Deepto Debnath - IISER Kolkata</title>
 </head>
 
 <body>
 
-<header>
-    <h1>Hello, World!</h1>
-    <h3>I am Deepto Debnath!</h3>
-</header>
-
 <nav>
-    <p>
-        <a href="">HOME</a>
-        &nbsp;
-        <a href="iiserk/">IISER-K MATERIALS</a>
-        &nbsp;
-        <a href="gallery/">GALLERY</a>
-        &nbsp;
-        <a href="random/">RANDOM</a>
-    </p>
+    <a href=""><img class="icon" id="me_icon" src="graphics/me_icon1.png" title="Hi there! Inspired by the Aseprite icon!"></a>
+
+    <img class="icon" id="menu" src="graphics/menu1.png" onClick="toggleMenu()">
+    
+    <ul id="nav_items">
+        <li>
+            <a href="">
+                <img class="icon" id="home" src="graphics/home1.png">
+                <span>Home</span>
+            </a>
+        </li>
+        <li>
+            <a href="iiserk/">
+                <img class="icon" id="study" src="graphics/study1.png">
+                <span>Notes</span>
+            </a>
+        </li>
+        <li>
+            <a href="gallery/">
+                <img class="icon" id="gallery" src="graphics/gallery1.png">
+                <span>Gallery</span>
+            </a>
+        </li>
+        <li>
+            <a href="random/">
+                <img class="icon" id="random" src="graphics/random1.png">
+                <span>Random</span>
+            </a>
+        </li>
+        <li>
+            <a href="blog/">
+                <img class="icon" id="blog" src="graphics/blog1.png">
+                <span>Blog</span>
+            </a>
+        </li>
+        <li>
+            <a href="cv.html">
+                <img class="icon" id="cv" src="graphics/cv1.png">
+                <span>CV</span>
+            </a>
+        </li>
+    </ul>
 </nav>
 
-<section id="mypic">
-    <img src="me.jpg" alt="File photo of Deepto Debnath" width="200px"/>
-</section>
-<section id="intro">
+<section id="bridge-container">
+    
+    <section id="island">
+        <img id="house" src="graphics/house.png">
+        <img id="door" src="graphics/door.png">
+    </section>
+
+    <section id="character">
+        <section id="speech">
+            <img id="mypic" src="mypic.jpeg">
+            <span id="hi_text">Hello there, I'm <b>Deepto</b>, a student of biology at IISER Kolkata.</span>
+        </section>
+        <img id="me" src="graphics/me.png">
+    </section>
+
+    <section id="bridge-spacer"></section>
+
+    <footer></footer>
+
+    <section id="bridge">
+        <section id="bridge-left">
+            <img id="tree" src="graphics/tree.gif">
+        </section>
+
+        <section id="bridge-center">
+            <section id="bridge-top"></section>
+            <section id="bridge-middle"></section>
+            <section id="bridge-bottom"></section>
+        </section>
         
+        <section id="bridge-right">
+
+            <section class="text_img">
+                <img src="iiser.jpeg" alt="IISER Kolkata" class="text_photo">
+                <span class="long_text">I am Deepto Debnath, a third year BS-MS student at <a href="https://www.iiserkol.ac.in/web/">IISER Kolkata</a>.
+                    I am currently pursuing a major in the biological sciences.
+                </span>
+            </section>
+            <section class="text_img">
+                <img src="origami_robin.jpg" alt="Origami Robin" class="text_photo">
+                <span class="long_text">I've been folding <a href="https://en.wikipedia.org/wiki/Origami">origami</a> since I was six. 
+                    I'm not a pro at it or anything, but it's a fun hobby to have. More pictures in the 
+                    <a href="gallery/">Origami</a> section of the 
+                    <a href="gallery/">Gallery</a>!
+                </span>
+            </section>
+            <section class="text_img">
+                <img src="curl.png" alt="Curl" class="text_photo">
+                <span>Programming is fun, and I know some
+                    <a href="https://www.java.com/en/">Java</a>, 
+                    <a href="https://www.python.org/">Python</a> and 
+                    <a href="https://www.w3schools.com/webdev/">web dev</a>; also a bit of 
+                    <a href="https://www.latex-project.org/">LaTeX</a> and <a href="https://typst.app/">Typst</a>.
+                    <br><br>Check out <a href="https://github.com/deeptwonine/curl">Curl</a>, an electric field visualiser!</span>
+            </section>
+            <section class="text_img">
+                <img src="messi.jpg" alt="The GOAT" class="text_photo">
+                <span>Sports I dabble in include 
+                    <a href="https://en.wikipedia.org/wiki/Association_football">football</a>, 
+                    <a href="https://en.wikipedia.org/wiki/Cricket">cricket</a>, 
+                    <a href="https://en.wikipedia.org/wiki/Badminton">badminton</a> and 
+                    <a href="https://en.wikipedia.org/wiki/Chess">chess</a>.
+                    <br><br>I only stay upto date with football stuff.</span>
+            </section>
+
+            <section id="footer">
+                <section id="signboard">
+                    <br>
+                    <b>Find me on:</b>
+                    <section id="icons">
+                        <a href="mailto:dd24ms091@iiserkol.ac.in"><img class="icon" id="mail_work" src="graphics/mail_work1.png" alt="institute email" title="Institute Email"></a>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                        <a href="mailto:deepto.debnath@outlook.com"><img class="icon" id="mail_pers" src="graphics/mail_pers1.png" alt="personal email" title="Personal Email"></a>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                        <a href="https://www.instagram.com/deeptwonine/"><img class="icon" id="insta" src="graphics/insta1.png" alt="instagram" title="Instagram"></a>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                        <a href="https://github.com/deeptwonine/"><img class="icon" id="github" src="graphics/github1.png" alt="github" title="GitHub"></a>
+                    </section>
+                </section>
+                <p>© Copyright 2026 Deepto Debnath. All lefts reserved.</p>
+            </section>
+        </section>
     </section>
 </section>
 
-<section>
-    <p>Hi there! I am Deepto, a first year BS-MS student at <a href="https://www.iiserkol.ac.in/web/en/#gsc.tab=0">IISER-Kolkata</a>. Yes, that's me right here. (I'm a Gryffindor!)</p>
+<script src="script.js"></script>
 
-    <p>My interests include -
-        <ol>
-            <li><a href="https://en.wikipedia.org/wiki/Origami"><b>Origami:</b></a> The Japanese art of paper folding. See the 
-            <a href="gallery/">Origami</a> section of the 
-            <a href="gallery/">Gallery</a> tab!</li>
-            
-            <li><a href="https://en.wikipedia.org/wiki/Computer_programming"><b>Coding:</b></a> In chronological order of me learning them, I know 
-            <a href="https://en.wikipedia.org/wiki/QBasic">QBASIC</a>, 
-            <a href="https://en.wikipedia.org/wiki/HTML">HTML</a>, 
-            <a href="https://en.wikipedia.org/wiki/Java_(programming_language)">Java</a>, 
-            <a href="https://en.wikipedia.org/wiki/Python_(programming_language)">Python</a>, 
-            <a href="https://en.wikipedia.org/wiki/CSS">CSS</a> and 
-            <a href="https://en.wikipedia.org/wiki/JavaScript">JavaScript</a>. Of these, I only know Java and Python well.</li>
-            
-            <li><a href="https://en.wikipedia.org/wiki/Sport"><b>Sports:</b></a> I take interest in 
-            <a href="https://en.wikipedia.org/wiki/Association_football">football</a>, 
-            <a href="https://en.wikipedia.org/wiki/Cricket">cricket</a>, 
-            <a href="https://en.wikipedia.org/wiki/Badminton">badminton</a> and 
-            <a href="https://en.wikipedia.org/wiki/Chess">chess</a> (is it a 'sport'?). Football at the top, specifically.</li>
-        </ol>
-    </p>
-</section>
-
-<footer>
-    <p>
-        <b>Find me on:</b>
-        <br>
-        <a href="mailto:dd24ms091@iiserkol.ac.in">institute email</a>
-        &nbsp;
-        <a href="mailto:deepto.debnath@outlook.com">personal email</a>
-        &nbsp;
-        <a href="https://www.instagram.com/deeptwonine/">instagram</a>
-        &nbsp;
-        <a href="https://github.com/deeptwonine/">github</a>
-    </p>
-    
-    <p>© Copyright 2024 Deepto Debnath. All lefts reserved.</p>
-</footer>
-
-<!-- USER DOCUMENT CONTENT END -->
-
-</body></html>
+</body>
+</html>
