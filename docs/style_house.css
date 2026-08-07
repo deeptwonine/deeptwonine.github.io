@@ -99,7 +99,7 @@ nav > a {
 }
 
 .icon {
-    width: clamp(20px, 3.125vw, 40px);
+    height: clamp(20px, 3.125vw, 40px);
     aspect-ratio: 19/20;
     object-position: 0% 0%;
     object-fit: cover;
@@ -119,6 +119,46 @@ nav > a {
 
 #nav_items li a:active .icon {
     object-position: 100% 0%;
+}
+
+.text_container {
+    height: 90%;
+    width: calc(100% - clamp(24.276px, 2.66vw, 34px));
+    margin-left: auto;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#project_github {
+    height: clamp(28.56px, 3.125vw, 40px);
+    background-image: url('graphics/github_big.png');
+    background-size: cover;
+    aspect-ratio: 64/20;
+}
+
+#project_download {
+    height: clamp(28.56px, 3.125vw, 40px);
+    background-image: url('graphics/download_big.png');
+    background-size: cover;
+    aspect-ratio: 80/20;
+}
+.project_icon {
+    background-position: 0% 0%;
+}
+
+.project_icon:hover {
+    background-position: 50% 0%;
+    color: #403f3f;
+}
+
+.project_icon:active {
+    background-position: 100% 0%;
+}
+
+.project_icon:active > section {
+    transform: translateY(0.3vw);
 }
 
 #tv_power {
@@ -150,7 +190,7 @@ nav > a {
 
 /* end of icons stuff */
 
-/* headers and subheaders */
+/* headers and subheaders and grid */
 
 header {
     background-image: url('graphics/hang_board.png');
@@ -167,7 +207,7 @@ header {
 
     color: #eea785;
     a:link {color: #e6cdc0;};
-    a:visited{color: #e6cdc0;};
+    a:visited {color: #e6cdc0;};
     a:hover {color: #f5e8e2;};
     a:active {color: #f5e8e2;};
     font-size: clamp(28.6px, 3vw, 40px);
@@ -190,7 +230,7 @@ header {
 
     color: #eea785;
     a:link {color: #e6cdc0;};
-    a:visited{color: #e6cdc0;};
+    a:visited {color: #e6cdc0;};
     a:hover {color: #f5e8e2;};
     a:active {color: #f5e8e2;};
     font-size: clamp(20px, 2.1vw, 28px);
@@ -215,6 +255,82 @@ header {
     margin: 10px;
 }
 
+.projects_container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 10px;
+}
+
+/* no more headers for como */
+
+/* projects jets */
+
+.project {
+    background-image: url('graphics/wall_project.png');
+    background-size: clamp(314.3px, 34.375vw, 440px) auto;
+    background-repeat: no-repeat;
+    width: clamp(314.3px, 34.375vw, 440px);
+    height: clamp(365.74px, 40vw, 512px);
+
+    padding-top: clamp(7.14px, 0.78vw, 10px);
+    padding-right: clamp(7.14px, 0.78vw, 10px);
+    padding-left: clamp(7.14px, 0.78vw, 10px);
+    padding-bottom: clamp(9.996px, 1.092vw, 14px);
+    margin: 10px auto;
+
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: clamp(4.5px, 0.525vw, 7px);
+    flex-shrink: 0;
+
+    color: #2e2e2e;
+    a:link {color: #7a5d1a;};
+    a:visited {color: #d19812;};
+    a:hover {color: #d19812;};
+    a:active {color: #7a5d1a;};
+    font-size: clamp(15px, 1.58vw, 21px);
+}
+
+.project span {
+    width: 100%;
+    display: inline-block;
+}
+
+.project .language {
+    font-size: clamp(12.852px, 1.404vw, 18px);
+    color: #474747;
+}
+
+.project .description {
+    font-size: clamp(12.852px, 1.404vw, 18px);
+}
+
+.project .photo {
+    width: clamp(299.88px, 32.76vw, 420px);
+    height: auto;
+}
+
+.project_btns {
+    margin-top: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: clamp(4.5px, 0.525vw, 7px);
+
+    color: #2e2e2e;
+    a:link {color: #2e2e2e;};
+    a:visited {color: #2e2e2e;};
+    a:hover {color: #403f3f;};
+    a:active {color: #2e2e2e;};
+    font-size: clamp(15px, 1.58vw, 21px);
+}
+
+/* i'm feeling empty */
+
+/* gallery cards */
+
 .card {
     background-image: url('graphics/wall_pic.png');
     background-size: clamp(182.87px, 20vw, 256px) auto;
@@ -236,7 +352,7 @@ header {
 
     color: #eea785;
     a:link {color: #e6cdc0;};
-    a:visited{color: #e6cdc0;};
+    a:visited {color: #e6cdc0;};
     a:hover {color: #f5e8e2;};
     a:active {color: #f5e8e2;};
     font-size: clamp(15px, 1.58vw, 21px);
@@ -255,7 +371,7 @@ header {
     width: 100%;
 }
 
-.photo {
+.card .photo {
     width: clamp(168.5px, 18.4vw, 236px);
     height: auto;
 }
@@ -450,10 +566,10 @@ footer {
     height: clamp(91.8px, 10vw, 128px);
 
     color: #2e2e2e;
-    a:link {color: #474747;};
-    a:visited{color: #2e2e2e;};
-    a:hover {color: #656565;};
-    a:active {color: #2e2e2e;};
+    a:link {color: #7a5d1a;};
+    a:visited{color: #d19812;};
+    a:hover {color: #d19812;};
+    a:active {color: #7a5d1a;};
 
     font-size: clamp(10px, 1.17vw, 15px);
     text-align: center;
@@ -503,6 +619,12 @@ footer {
 
 /* responsive changes*/
 
+@media screen and (max-width: 700px) {
+    .projects_container {
+        grid-template-columns: 1fr;
+    }
+}
+
 @media screen and (max-width: 650px) {
     #tree {
         display: none;
@@ -512,8 +634,7 @@ footer {
         display: flex;
         cursor: pointer;
     }
-
-    /* Slide the full island down into view */
+    
     nav.active {
         margin-top: 0;
     }
