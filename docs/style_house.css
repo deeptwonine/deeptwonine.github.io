@@ -257,7 +257,7 @@ header {
 
 .projects_container {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
     margin: 10px;
 }
 
@@ -618,6 +618,12 @@ footer {
 /* end of animations */
 
 /* responsive changes*/
+
+@media screen and (max-width: 1500px) {
+    .projects_container {
+        grid-template-columns: 1fr 1fr;
+    }
+}
 
 @media screen and (max-width: 700px) {
     .projects_container {
