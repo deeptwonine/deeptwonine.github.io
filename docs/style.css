@@ -281,6 +281,7 @@ nav > a {
     background-repeat: repeat-y;
     background-size: clamp(96px, 15vw, 192px) auto;
     background-position: center top;
+    
     animation-name: bridge;
     animation-duration: 1200ms;
     animation-iteration-count: infinite;

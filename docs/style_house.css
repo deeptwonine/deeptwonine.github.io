@@ -247,6 +247,7 @@ header {
 
 .container {
     margin-top: 50px;
+    flex: 1;
 }
 
 .grid_container {
@@ -262,6 +263,212 @@ header {
 }
 
 /* no more headers for como */
+
+/* blog blog blog */
+
+.blog_container {
+    display: flex;
+    flex-direction: row;
+
+    justify-content: center;
+    flex: 1;
+
+    gap: clamp(5px, 5vw, 50px);
+    margin-top: 50px;
+}
+
+.blog_item {
+    background-image: url('graphics/wall_paper.png');
+    background-size: clamp(314.3px, 34.375vw, 440px) auto;
+    width: clamp(314.3px, 34.375vw, 440px);
+    height: clamp(342.88px, 37.5vw, 480px);
+
+    padding-top: clamp(14.28px, 1.56vw, 20px);
+    padding-right: clamp(11.424px, 1.248vw, 16px);
+    padding-left: clamp(11.424px, 1.248vw, 16px);
+    padding-bottom: clamp(9.996px, 1.092vw, 14px);
+    margin: 10px;
+
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: clamp(4.5px, 0.525vw, 7px);
+    flex-shrink: 0;
+
+    color: #2e2e2e;
+    a:link {color: #ad862a;};
+    a:visited {color: #ad862a;};
+    a:hover {color: #d19812;};
+    a:active {color: #d19812;};
+    font-size: clamp(15px, 1.58vw, 21px);
+}
+
+.date {
+    font-size: clamp(12.852px, 1.404vw, 18px);
+    color: #474747;
+}
+
+.blog_item .description {
+    font-size: clamp(12.852px, 1.404vw, 18px);
+}
+
+.blog_item .photo {
+    width: clamp(291.312px, 31.824vw, 408px);
+    height: auto;
+    box-shadow: 0px 2px #a9a9a9;
+}
+
+.blog_dates_container {
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+}
+
+.month_drawers_container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.month_drawer {
+    background-image: url('graphics/drawer.png');
+    background-size: cover;
+    background-position: 0% 0%;
+
+    width: clamp(123.43px, 14.4vw, 192px);
+    aspect-ratio: 2;
+
+    display: flex;
+    align-items: center;
+}
+
+.month_drawer:hover {
+    background-position: 50% 0%;
+    span {
+        background-color: #a16143;
+        color: #ffb28f;
+        animation: none;
+    }
+}
+
+.month_drawer:active {
+    background-position: 100% 0%;
+    span {
+        background-color: #8f563b;
+        color: #eea785;
+        transform: translateY(4.17%);
+    }
+}
+
+.month_drawer > span {
+    width: 80%;
+    background-color: #8f563b;
+    color: #eea785;
+    text-align: center;
+    font-size: clamp(15px, 1.58vw, 21px);
+
+    margin-left: auto;
+    margin-right: auto;
+    opacity: 0%;
+
+    animation-name: appear;
+    animation-duration: 3000ms;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+.last_drawer {
+    box-shadow: 0px 8px 0px -4px rgba(0, 0, 0, 0.25);
+}
+
+.dates_subheader {
+    background-image: url('graphics/wall_board_small.png');
+    background-size: cover;
+    width: clamp(123.43px, 14.4vw, 192px);
+    aspect-ratio: 2;
+    margin-bottom: 10px;
+
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+
+    color: #eea785;
+    font-size: clamp(20px, 2.1vw, 28px);
+    text-align: center;
+}
+
+.dates_subheader > span {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* end thanks bye */
+
+/* blog article page stuff */
+
+.paper {
+    width: calc(100% - 2vw);
+    max-width: 960px;
+    margin: 1vw auto;
+    flex: 1;
+
+    z-index: 5;
+}
+
+#paper_top, #paper_bottom {
+    width: 100%;
+    margin: 0;
+    display: block;
+}
+
+#blog_content {
+    width: 100%;
+    background-image: url('graphics/paper.png');
+    background-size: 100% auto;
+    background-repeat: repeat-y;
+
+    padding-left: 6.25%;
+    padding-right: 6.25%;
+
+    box-sizing: border-box;
+
+    color: #2e2e2e;
+    a:link {color: #7a5d1a;}
+    a:visited {color: #d19812;}
+    a:hover {color: #d19812;}
+    a:active {color: #7a5d1a;}
+
+    h1:first-child {
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+    h1 {
+        font-size: clamp(41.14px, 4.8vw, 64px);
+        text-align: left;
+    }
+    h2 {
+        font-size: clamp(20.57px, 2.4vw, 32px);
+        text-align: left;
+    }
+    h3 {
+        font-size: clamp(15.43px, 1.8vw, 24px);
+        color: #474747;
+    }
+    font-size: clamp(12.852px, 1.404vw, 18px);
+    text-align: justify;
+
+    img {
+        width: 100%;
+        box-shadow: 0px 4px #a9a9a9;
+    }
+
+    .caption {
+        color: #474747;
+    }
+}
+
+/* end of article shit HURRAY */
 
 /* projects jets */
 
@@ -615,6 +822,11 @@ footer {
     100% {object-position: 0% 0%;}
 }
 
+@keyframes appear {
+    from {opacity: 0%;}
+    to {opacity: 100%;}
+}
+
 /* end of animations */
 
 /* responsive changes*/
@@ -627,6 +839,10 @@ footer {
 
 @media screen and (max-width: 700px) {
     .projects_container {
+        grid-template-columns: 1fr;
+    }
+
+    .month_drawers_container {
         grid-template-columns: 1fr;
     }
 }
@@ -687,6 +903,22 @@ footer {
     
     .grid_container {
         grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .blog_container {
+        flex-direction: column-reverse;
+        margin-left: auto;
+        margin-right: auto;
+
+        margin-top: 20px;
+    }
+
+    .month_drawers_container {
+        grid-template-columns: 1fr 1fr;
+        margin-left: auto;
+        margin-right: auto;
     }
 }
 
