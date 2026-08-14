@@ -316,7 +316,7 @@ header {
 .blog_item .photo {
     width: clamp(291.312px, 31.824vw, 408px);
     height: auto;
-    box-shadow: 0px 2px #a9a9a9;
+    box-shadow: 1.29px clamp(0px, 0.15vw, 2px) #a9a9a9;
 }
 
 .blog_dates_container {
@@ -460,7 +460,7 @@ header {
 
     img {
         width: 100%;
-        box-shadow: 0px 4px #a9a9a9;
+        box-shadow: 0px clamp(0px, calc((100cqw - 2vw) * (1/256)), 3.75px) #a9a9a9;
     }
 
     .caption {
